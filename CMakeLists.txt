@@ -66,7 +66,7 @@ endif()
 
 add_library(etcdpp STATIC ${proto_ccs})
 if (WIN32)
-  target_compile_definitions(etcdpp PRIVATE "_WIN32_WINNT=0x600")
+  target_compile_definitions(etcdpp PUBLIC "_WIN32_WINNT=0x600")
 endif()
 
 target_include_directories(etcdpp PRIVATE "generated/")
